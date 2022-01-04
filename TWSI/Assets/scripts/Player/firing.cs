@@ -5,11 +5,12 @@ using UnityEngine;
 public class firing : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject FireButton, bulletHolder, bullet;
+    public GameObject FireButton, bulletHolder, bulletHolder2, bulletHolder3, bullet, bullet2;
 
     public float waitingTime = .5f;
     float timePassed;
-    
+
+    public int weaponType = 0;
     void Start()
     {
         timePassed = Mathf.Infinity;
@@ -27,8 +28,19 @@ public class firing : MonoBehaviour
             if(timePassed >= waitingTime)
             {
                 timePassed = 0;
-                Debug.Log("patata");
-                Instantiate(bullet, bulletHolder.transform.position, Quaternion.identity);
+                
+
+                //Different weapon behavior
+                if(weaponType == 0)
+                {
+                    Instantiate(bullet, bulletHolder.transform.position, Quaternion.identity);
+                }else if(weaponType == 1)
+                {
+                    Instantiate(bullet, bulletHolder.transform.position, Quaternion.identity);
+                    Instantiate(bullet, bulletHolder2.transform.position, bulletHolder2.transform.rotation);
+                    Instantiate(bullet, bulletHolder3.transform.position, bulletHolder3.transform.rotation);
+                } 
+                
             }
             
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class levelHandler : MonoBehaviour
 {
@@ -23,5 +24,13 @@ public class levelHandler : MonoBehaviour
         }
     }
 
+
+    private void Update()
+    {
+        if(GameObject.Find("Enemies").transform.childCount <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
 
 }

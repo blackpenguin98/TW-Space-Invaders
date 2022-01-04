@@ -70,13 +70,13 @@
     <Compile Include="Assets\scripts\UI\buttonLeft.cs" />
     <Compile Include="Assets\scripts\Enemy\ExplosionRemove.cs" />
     <Compile Include="Assets\scripts\Background\BMover.cs" />
+    <Compile Include="Assets\scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\scripts\UI\buttonFire.cs" />
     <Compile Include="Assets\scripts\UI\score.cs" />
     <Compile Include="Assets\scripts\Background\BInstanciate.cs" />
     <Compile Include="Assets\scripts\UI\CreditsMenu.cs" />
-    <Compile Include="Assets\scripts\Enemy\EnemyMetadata.cs" />
     <Compile Include="Assets\scripts\levelHandler.cs" />
-    <Compile Include="Assets\scripts\Enemy\EnemyMovement.cs" />
+    <Compile Include="Assets\scripts\Enemy\EnemyMetadata.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

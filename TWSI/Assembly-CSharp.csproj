@@ -53,12 +53,19 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\scripts\Player\movement.cs" />
-    <Compile Include="Assets\scripts\button.cs" />
-    <Compile Include="Assets\scripts\buttonLeft.cs" />
-    <Compile Include="Assets\scripts\buttonFire.cs" />
-    <Compile Include="Assets\scripts\Player\firing.cs" />
+    <Compile Include="Assets\scripts\UI\button.cs" />
     <Compile Include="Assets\scripts\Player\bullet.cs" />
+    <Compile Include="Assets\scripts\Player\movement.cs" />
+    <Compile Include="Assets\scripts\Player\firing.cs" />
+    <Compile Include="Assets\scripts\UI\buttonLeft.cs" />
+    <Compile Include="Assets\scripts\UI\buttonFire.cs" />
+    <Compile Include="Assets\scripts\boarders.cs" />
+    <Compile Include="Assets\scripts\Background\BInstanciate.cs" />
+    <Compile Include="Assets\scripts\Background\BMover.cs" />
+    <Compile Include="Assets\scripts\Background\BDeleter.cs" />
+    <Compile Include="Assets\scripts\UI\CreditsMenu.cs" />
+    <Compile Include="Assets\scripts\UI\MenuButtons.cs" />
+    <Compile Include="Assets\scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

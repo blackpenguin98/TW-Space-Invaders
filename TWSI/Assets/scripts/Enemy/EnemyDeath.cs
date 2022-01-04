@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
-
+    public float distanceMultiplier;
 
     // Update is called once per frame
     public GameObject explosion, randomWeapon;
     void Update()
     {
+
+        distanceMultiplier = Vector2.Distance(GameObject.Find("Player").transform.position, transform.position);
         
         if(GetComponent<EnemyMetadata>().health <= 0)
         {
@@ -23,12 +25,25 @@ public class EnemyDeath : MonoBehaviour
                 Instantiate(randomWeapon, transform.position, Quaternion.identity);
             }
 
-            Debug.Log(probability);
+           
 
 
-            //
+            //Score
 
-            GameManager.instance.score += GetComponent<EnemyMetadata>().points;
+
+            if(distanceMultiplier >= 5.9)
+            {
+                GameManager.instance.score += GetComponent<EnemyMetadata>().points * 3;
+            } else
+            {
+                GameManager.instance.score += GetComponent<EnemyMetadata>().points;
+            }
+            
+
+
+
+
+
             Destroy(gameObject);
         }
 
